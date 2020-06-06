@@ -5,21 +5,16 @@ const year = document.querySelector('input#year');
 const cvv = document.querySelector('input#cvv');
 const submit = document.querySelector('input#submit')
 const form = document.querySelector('form#form')
+const backcard = document.querySelector('.backcard')
 const userData = {};
 const cardInfo = [cardNumber, cardHolder, month, year, cvv];
-// for (let inputs of cardInfo) {
-//     inputs.addEventListener('change', (e) => {
-//         userData[e.target.name] = e.target.value;
-
-//     })
-
-// }
-// if (typeof (cardNumber.value) == 'string') {
-//     cardNumber.value = " "
-// } else {
-//     cardNumber.value = cardNumber.value
-// }
-
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
+const card = document.querySelector('.card')
+const rotate = document.querySelector('button')
+rotate.addEventListener('click', () => {
+    card.classList.toggle('rotateF')
+    backcard.classList.toggle('rotateB')
+})
+cvv.addEventListener('focus', () => {
+    card.classList.toggle('rotateF')
+    backcard.classList.toggle('rotateB')
 })
