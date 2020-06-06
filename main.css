@@ -96,27 +96,41 @@ form {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: repeat(3, minmax(0, auto));
+	background-image: url('map.png');
+	background-position: center;
+	background-size: cover;
 }
 
 .silver {
-	grid-row: 1/2;
+	grid-row: 2/3;
 	grid-column: 1/4;
 }
 .cardtype {
-	grid-row: 1/2;
+	grid-row: 2/3;
 	grid-column: 9/13;
+	text-align: justify;
 }
 .inputhere {
-	grid-row: 2/3;
+	grid-row: 3/4;
 	grid-column: 1/13;
+	border: 1px solid white;
+	border-radius: 5px;
+	display: inline-grid;
+	align-items: center;
+	margin-bottom: 15px;
+}
+.inputhere b {
+	display: block;
+	margin-left: 10px;
+	font-weight: normal;
 }
 .carduser {
-	grid-row: 3/4;
+	grid-row: 4/5;
 	grid-column: 1/4;
 }
 .expire {
-	grid-row: 3/4;
-	grid-column: 9/13;
+	grid-row: 4/5;
+	grid-column: 10/13;
 }
 .backcard {
 	background-color: #e84118;
