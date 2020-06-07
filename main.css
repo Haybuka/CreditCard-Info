@@ -1,5 +1,6 @@
 * {
 	box-sizing: border-box;
+	font-family: 'Mada';
 }
 
 body {
@@ -83,7 +84,9 @@ input#submit {
 form {
 	margin-top: 80px;
 }
-
+form > span {
+	display: none;
+}
 .card {
 	background-color: #e84118;
 	width: 323.5px;
@@ -148,7 +151,12 @@ form {
 }
 .carduser {
 	grid-row: 4/5;
-	grid-column: 1/4;
+	grid-column: 1/6;
+	text-transform: uppercase;
+}
+.carduser small {
+	font-size: 10px;
+	font-weight: bold;
 }
 .expire {
 	grid-row: 4/5;

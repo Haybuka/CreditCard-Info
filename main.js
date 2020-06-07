@@ -11,6 +11,7 @@ const first = document.querySelector('.card .inputhere .first')
 const second = document.querySelector('.card .inputhere .second')
 const third = document.querySelector('.card .inputhere .third')
 const fourth = document.querySelector('.card .inputhere .fourth')
+const cardUserName = document.querySelector('.card .carduser p')
 const userData = {};
 const cardInfo = [cardNumber, cardHolder, month, year, cvv];
 const card = document.querySelector('.card')
@@ -27,6 +28,13 @@ cardNumber.addEventListener('input', () => {
     second.textContent = secondFour;
     third.textContent = thirdFour;
     fourth.textContent = fourthfour;
+})
+//handling Card holder an its update
+cardHolder.addEventListener('input', function () {
+    let holder = this.value;
+
+    cardUserName.textContent = this.value;
+
 })
 // handling cvv field and rotation
 const rotate = () => {
