@@ -4,19 +4,24 @@
 }
 
 body {
-	background-color: rgb(128, 196, 196);
+	background: url(mario.jpg);
+	/* background-position: center; */
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: #929292;
 }
 
 #container {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: repeat(3, minmax(0, auto));
+	margin: 20px 80px;
 }
 
 main {
 	grid-row: 2/3;
 	grid-column: 3/6;
-	width: 400px;
+	width: 380px;
 	margin: 0 auto;
 	background-color: white;
 	border-radius: 5px;
@@ -118,11 +123,7 @@ form>span {
 	color: white;
 	background-position: center;
 	background-size: cover;
-	background: #aa3a38;
-	/* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #2f7336, #aa3a38);
-	/* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #2f7336, #aa3a38);
+	background-color: #df9f32;
 	position: relative;
 	z-index: 2;
 	transition: all 1s 1s;
@@ -136,7 +137,7 @@ form>span {
 
 .cardtype {
 	grid-row: 2/3;
-	grid-column: 9/13;
+	grid-column: 11/13;
 	text-align: justify;
 }
 
@@ -161,6 +162,7 @@ form>span {
 .inputhere li {
 	list-style-type: none;
 	font-weight: bold;
+	letter-spacing: 7px;
 }
 
 .inputhere li.first {
@@ -181,7 +183,7 @@ form>span {
 
 .carduser {
 	grid-row: 4/5;
-	grid-column: 1/6;
+	grid-column: 1/8;
 	text-transform: uppercase;
 }
 
@@ -257,7 +259,7 @@ form>span {
 
 	#container {
 		position: relative;
-		left: -18%;
+		left: -28%;
 	}
 
 	main {
