@@ -54,7 +54,7 @@ cvv.addEventListener('input', (e) => {
     cvvSpan.textContent = cvv.value;
 })
 submit.addEventListener('click', function (e) {
-    e.preventDefault();
+
     cvv.textContent = " "
     cardNumber.textContent = " "
     cardHolder.textContent = " "
