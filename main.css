@@ -6,6 +6,7 @@
 body {
 	background-color: rgb(128, 196, 196);
 }
+
 #container {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
@@ -29,10 +30,12 @@ main {
 p {
 	margin: 0;
 }
+
 input {
 	display: block;
 	margin-bottom: 10px;
 }
+
 span {
 	display: block;
 	margin-bottom: 20px;
@@ -66,13 +69,16 @@ input#year {
 	width: 30%;
 	display: inline-block;
 	padding: 5px;
+	margin-left: 5px;
 }
 
 input#cvv {
-	width: 30%;
+	width: 20%;
+	margin-left: 15%;
 	display: inline-block;
 	padding: 5px;
 }
+
 input#submit {
 	width: 100%;
 	padding: 5px 20px;
@@ -83,10 +89,18 @@ input#submit {
 
 form {
 	margin-top: 80px;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(3, minmax(0, auto));
 }
-form > span {
+
+form .line {
+	grid-row: 3/4;
+}
+
+form>span {
 	display: none;
 }
+
 .card {
 	width: 323.5px;
 	height: 204.09px;
@@ -104,23 +118,28 @@ form > span {
 	color: white;
 	background-position: center;
 	background-size: cover;
-	background: #aa3a38; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #2f7336, #aa3a38); /* Chrome 10-25, Safari 5.1-6 */
+	background: #aa3a38;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #2f7336, #aa3a38);
+	/* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to right, #2f7336, #aa3a38);
 	position: relative;
 	z-index: 2;
 	transition: all 1s 1s;
 	box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.527);
 }
+
 .silver {
 	grid-row: 2/3;
 	grid-column: 1/4;
 }
+
 .cardtype {
 	grid-row: 2/3;
 	grid-column: 9/13;
 	text-align: justify;
 }
+
 .inputhere {
 	grid-row: 3/4;
 	grid-column: 1/13;
@@ -131,49 +150,60 @@ form > span {
 	margin-bottom: 15px;
 	height: 30px;
 }
+
 .inputhere ul {
 	display: grid;
 	grid-column: 1/13;
 	padding: 0;
 	margin: 0;
 }
+
 .inputhere li {
 	list-style-type: none;
 	font-weight: bold;
 }
+
 .inputhere li.first {
 	grid-column: 2/4;
 }
+
 .inputhere li.second {
 	grid-column: 5/7;
 }
+
 .inputhere li.third {
 	grid-column: 9/11;
 }
+
 .inputhere li.fourth {
 	grid-column: 12/13;
 }
+
 .carduser {
 	grid-row: 4/5;
 	grid-column: 1/6;
 	text-transform: uppercase;
 }
+
 .carduser small {
 	font-size: 10px;
 	font-weight: bold;
 }
+
 .expire {
 	grid-row: 4/5;
 	grid-column: 10/13;
 }
+
 .backcard {
-	background: #2f7336; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #aa3a38, #2f7336); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(
-		to right,
-		#aa3a38,
-		#2f7336
-	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: #2f7336;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #aa3a38, #2f7336);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right,
+			#aa3a38,
+			#2f7336);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	width: 323.5px;
 	height: 204.09px;
 	border-radius: 10px;
@@ -188,12 +218,14 @@ form > span {
 	grid-template-rows: repeat(3, minmax(0, auto));
 	box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.527);
 }
+
 .backcard .black {
 	grid-row: 2/3;
 	grid-column: 1/13;
 	width: 100%;
 	background-color: #000;
 }
+
 .backcard .white {
 	grid-row: 3/4;
 	grid-column: 1/13;
@@ -204,16 +236,31 @@ form > span {
 	text-align: right;
 	padding: 5px;
 }
+
 .backcard .cardlogo {
 	grid-row: 4/5;
 	grid-column: 11/13;
 }
+
 .rotateF {
 	/* transform: rotateX(90deg); */
 	opacity: 0;
 	transform: rotateY(90deg);
 }
+
 .rotateB {
 	opacity: 1;
 	transform: rotateY(0deg);
+}
+
+@media screen and (max-width:400px) {
+
+	#container {
+		position: relative;
+		left: -18%;
+	}
+
+	main {
+		width: 350px;
+	}
 }
