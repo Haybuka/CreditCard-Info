@@ -91,6 +91,7 @@ form {
 	transition: all 1s 2s;
 	grid-row: 1/2;
 	grid-column: 3/6;
+	grid-column: 6/9;
 	opacity: 1;
 	padding: 10px;
 	display: grid;
@@ -99,6 +100,9 @@ form {
 	background-image: url('map.png');
 	background-position: center;
 	background-size: cover;
+	position: relative;
+	z-index: 2;
+	transition: all 1s 1s;
 }
 
 .silver {
@@ -133,7 +137,7 @@ form {
 	grid-column: 10/13;
 }
 .backcard {
-	background-color: #e84118;
+	background-color: #18e834;
 	width: 323.5px;
 	height: 204.09px;
 	border-radius: 10px;
@@ -143,8 +147,30 @@ form {
 	grid-row: 1/2;
 	grid-column: 6/9;
 	opacity: 1;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(3, minmax(0, auto));
 }
-
+.backcard .black {
+	grid-row: 2/3;
+	grid-column: 1/13;
+	width: 100%;
+	background-color: #000;
+}
+.backcard .white {
+	grid-row: 3/4;
+	grid-column: 1/13;
+	background-color: #fff;
+	margin: 20px 10px;
+	border-radius: 5px;
+	height: 30px;
+	text-align: right;
+	padding: 5px;
+}
+.backcard .cardlogo {
+	grid-row: 4/5;
+	grid-column: 11/13;
+}
 .rotateF {
 	/* transform: rotateX(90deg); */
 	opacity: 0;
