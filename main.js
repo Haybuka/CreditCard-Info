@@ -10,11 +10,7 @@ const cvvSpan = document.querySelector('.white span')
 const userData = {};
 const cardInfo = [cardNumber, cardHolder, month, year, cvv];
 const card = document.querySelector('.card')
-const rotate = document.querySelector('button')
-rotate.addEventListener('click', () => {
-    card.classList.toggle('rotateF')
-    backcard.classList.toggle('rotateB')
-})
+
 cvv.addEventListener('focus', (e) => {
     card.classList.toggle('rotateF')
     backcard.classList.toggle('rotateB')
