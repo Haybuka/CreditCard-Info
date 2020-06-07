@@ -12,9 +12,15 @@ const second = document.querySelector('.card .inputhere .second')
 const third = document.querySelector('.card .inputhere .third')
 const fourth = document.querySelector('.card .inputhere .fourth')
 const cardUserName = document.querySelector('.card .carduser p')
+const exp = document.querySelector('.card .expire p')
 const userData = {};
 const cardInfo = [cardNumber, cardHolder, month, year, cvv];
-const card = document.querySelector('.card')
+const card = document.querySelector('.card');
+
+year.addEventListener('input', () => {
+
+    exp.textContent = `${month.value}/${year.value}`;
+})
 //handling Card Num Input
 cardNumber.addEventListener('input', () => {
     //split of string to occupy the display on the card
@@ -47,7 +53,7 @@ cvv.addEventListener('blur', rotate)
 cvv.addEventListener('input', (e) => {
     cvvSpan.textContent = cvv.value;
 })
-form.addEventListener('submit', function (e) {
+submit.addEventListener('click', function (e) {
     e.preventDefault();
     cvv.textContent = " "
     cardNumber.textContent = " "

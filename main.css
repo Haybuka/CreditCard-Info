@@ -88,7 +88,6 @@ form > span {
 	display: none;
 }
 .card {
-	background-color: #e84118;
 	width: 323.5px;
 	height: 204.09px;
 	border-radius: 10px;
@@ -102,13 +101,17 @@ form > span {
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: repeat(3, minmax(0, auto));
 	background-image: url('map.png');
+	color: white;
 	background-position: center;
 	background-size: cover;
+	background: #aa3a38; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #2f7336, #aa3a38); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #2f7336, #aa3a38);
 	position: relative;
 	z-index: 2;
 	transition: all 1s 1s;
+	box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.527);
 }
-
 .silver {
 	grid-row: 2/3;
 	grid-column: 1/4;
@@ -126,6 +129,7 @@ form > span {
 	display: inline-grid;
 	align-items: center;
 	margin-bottom: 15px;
+	height: 30px;
 }
 .inputhere ul {
 	display: grid;
@@ -163,7 +167,13 @@ form > span {
 	grid-column: 10/13;
 }
 .backcard {
-	background-color: #18e834;
+	background: #2f7336; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #aa3a38, #2f7336); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to right,
+		#aa3a38,
+		#2f7336
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	width: 323.5px;
 	height: 204.09px;
 	border-radius: 10px;
@@ -176,6 +186,7 @@ form > span {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: repeat(3, minmax(0, auto));
+	box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.527);
 }
 .backcard .black {
 	grid-row: 2/3;
@@ -202,7 +213,6 @@ form > span {
 	opacity: 0;
 	transform: rotateY(90deg);
 }
-
 .rotateB {
 	opacity: 1;
 	transform: rotateY(0deg);
