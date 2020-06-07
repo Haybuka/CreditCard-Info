@@ -124,10 +124,27 @@ form {
 	align-items: center;
 	margin-bottom: 15px;
 }
-.inputhere b {
-	display: block;
-	margin-left: 10px;
-	font-weight: normal;
+.inputhere ul {
+	display: grid;
+	grid-column: 1/13;
+	padding: 0;
+	margin: 0;
+}
+.inputhere li {
+	list-style-type: none;
+	font-weight: bold;
+}
+.inputhere li.first {
+	grid-column: 2/4;
+}
+.inputhere li.second {
+	grid-column: 5/7;
+}
+.inputhere li.third {
+	grid-column: 9/11;
+}
+.inputhere li.fourth {
+	grid-column: 12/13;
 }
 .carduser {
 	grid-row: 4/5;
