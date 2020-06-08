@@ -4,7 +4,7 @@
 }
 
 body {
-	font-family: 'Mada';
+	font-family: 'Poppins', sans-serif;
 	font-weight: 400px;
 	background-color: rgb(238, 234, 234);
 }
@@ -118,6 +118,11 @@ form .line {
 
 form>span {
 	display: none;
+}
+
+.err {
+	display: block;
+	color: red;
 }
 
 .card {
@@ -264,6 +269,44 @@ form>span {
 
 }
 
+.notice {
+	background-color: #27ae60;
+	color: white;
+	position: absolute;
+	border-radius: 5%;
+	z-index: 10;
+	transform: translateX(-300px);
+	transition: all 1s 0.5s;
+	animation: fade 5s linear;
+	opacity: 0;
+}
+
+.info {
+	transform: translateX(30px);
+}
+
+.notice p {
+	padding: 5px;
+}
+
+@keyframes fade {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	80% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
 @media screen and (max-width:400px) {
 
 	#container {
@@ -273,5 +316,14 @@ form>span {
 
 	main {
 		width: 350px;
+	}
+
+	.notice {
+		transform: translateX(-100px);
+		transition: all 1s 0.5s;
+	}
+
+	.info {
+		transform: translateX(30px);
 	}
 }

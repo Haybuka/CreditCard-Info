@@ -5,6 +5,7 @@ const year = document.querySelector('input#year');
 const cvv = document.querySelector('input#cvv');
 const submit = document.querySelector('input#submit');
 const form = document.querySelector('form#form');
+const err = document.querySelector('form > span');
 const backcard = document.querySelector('.backcard');
 const cvvSpan = document.querySelector('.white span');
 const first = document.querySelector('.card .inputhere .first');
@@ -14,6 +15,8 @@ const fourth = document.querySelector('.card .inputhere .fourth');
 const cardUserName = document.querySelector('.card .carduser p');
 const exp = document.querySelector('.card .expire p');
 const cardlogo = document.querySelectorAll('.cardlogo img');
+const notice = document.querySelector('.notice');
+const noticeText = document.querySelector('.notice p');
 const userData = {};
 const cardInfo = [ cardNumber, cardHolder, month, year, cvv ];
 const card = document.querySelector('.card');
@@ -23,6 +26,11 @@ year.addEventListener('input', () => {
 });
 //handling Card Num Input
 cardNumber.addEventListener('input', () => {
+	if (cardNumber.textLength != 16) {
+		err.classList.add('err');
+	} else {
+		err.classList.remove('err');
+	}
 	//split of string to occupy the display on the card
 	const num = cardNumber.value;
 	for (let logo of cardlogo) {
@@ -63,13 +71,17 @@ cvv.addEventListener('blur', rotate);
 cvv.addEventListener('input', (e) => {
 	cvvSpan.textContent = cvv.value;
 });
-submit.addEventListener('click', function(e) {
-	cvv.textContent = ' ';
-	cardNumber.textContent = ' ';
-	cardHolder.textContent = ' ';
-	month.textContent = ' ';
-	year.textContent == ' ';
+form.addEventListener('submit', function(e) {
+	if (cardNumber.textLength != 16) {
+		notice.style.backgroundColor = 'red';
+		noticeText.textContent = 'not Submitted';
+		notice.style.transform = 'translateX(30px)';
+		e.preventDefault();
+	} else {
+		cvv.textContent = ' ';
+		cardNumber.textContent = ' ';
+		cardHolder.textContent = ' ';
+		month.textContent = ' ';
+		year.textContent = ' ';
+	}
 });
-
-// visa starts with a 4
-// MaterCARD starts with 51 to 55
