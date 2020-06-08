@@ -1,14 +1,12 @@
 * {
 	box-sizing: border-box;
-	font-family: 'Mada';
+
 }
 
 body {
-	background: url(mario.jpg);
-	/* background-position: center; */
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-color: #929292;
+	font-family: 'Mada';
+	font-weight: 400px;
+	background-color: rgb(238, 234, 234);
 }
 
 #container {
@@ -23,13 +21,13 @@ main {
 	grid-column: 3/6;
 	width: 380px;
 	margin: 0 auto;
-	background-color: white;
 	border-radius: 5px;
-	box-shadow: 5px 5px 3px rgba(82, 79, 79, 0.534);
+	box-shadow: 3px 3px 10px rgba(82, 79, 79, 0.534);
 	padding: 20px;
 	position: relative;
 	top: -15%;
 	left: 20%;
+	background-color: #dfd7d7;
 }
 
 p {
@@ -41,33 +39,43 @@ input {
 	margin-bottom: 10px;
 }
 
-span {
+/* span {
 	display: block;
 	margin-bottom: 20px;
 	color: rgb(168, 28, 28);
-}
+} */
 
 input#cardnum {
 	display: block;
 	width: 100%;
 	padding: 5px;
+	border-radius: 5px;
+
 }
 
-input#cardnum:focus {
-	border: 1px solid rgb(83, 83, 156);
-	box-shadow: 3px 3px 5px rgb(26, 25, 25);
+input#cardnum:focus,
+input#cardHolder:focus,
+input#month:focus,
+input#year:focus,
+input#cvv:focus {
+	box-shadow: 2px 2px rgba(26, 25, 25, 0.692);
+	border: none;
 }
 
 input#cardHolder {
 	display: block;
 	width: 100%;
 	padding: 5px;
+	border-radius: 5px;
+
 }
 
 input#month {
 	width: 30%;
 	display: inline-block;
 	padding: 5px;
+	border-radius: 5px;
+
 }
 
 input#year {
@@ -75,6 +83,8 @@ input#year {
 	display: inline-block;
 	padding: 5px;
 	margin-left: 5px;
+	border-radius: 5px;
+
 }
 
 input#cvv {
@@ -82,6 +92,8 @@ input#cvv {
 	margin-left: 15%;
 	display: inline-block;
 	padding: 5px;
+	border-radius: 5px;
+
 }
 
 input#submit {
@@ -90,6 +102,8 @@ input#submit {
 	color: white;
 	background-color: rgb(31, 31, 128);
 	border: none;
+	border-radius: 5px;
+
 }
 
 form {
@@ -119,14 +133,14 @@ form>span {
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: repeat(3, minmax(0, auto));
-	background-image: url('map.png');
+	background-image: url(images/map.png);
 	color: white;
 	background-position: center;
 	background-size: cover;
 	background-color: #df9f32;
 	position: relative;
 	z-index: 2;
-	transition: all 1s 1s;
+	transition: all 1s 0.5s;
 	box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.527);
 }
 
@@ -137,8 +151,9 @@ form>span {
 
 .cardtype {
 	grid-row: 2/3;
-	grid-column: 11/13;
+	grid-column: 10/13;
 	text-align: justify;
+	margin-top: 5%;
 }
 
 .inputhere {
@@ -198,37 +213,30 @@ form>span {
 }
 
 .backcard {
-	background: #2f7336;
-	/* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #aa3a38, #2f7336);
-	/* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right,
-			#aa3a38,
-			#2f7336);
-	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background-color: #b97f19;
 	width: 323.5px;
-	height: 204.09px;
+	height: 204.0px;
 	border-radius: 10px;
 	margin: 0 auto;
 	transform: rotatey(90deg);
-	transition: all 1s 1s;
+	transition: all 1s 0.9s;
 	grid-row: 1/2;
 	grid-column: 4/7;
-	opacity: 1;
+	opacity: 0;
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-template-rows: repeat(3, minmax(0, auto));
-	box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.527);
+
 }
 
-.backcard .black {
+.black {
 	grid-row: 2/3;
 	grid-column: 1/13;
 	width: 100%;
 	background-color: #000;
 }
 
-.backcard .white {
+.white {
 	grid-row: 3/4;
 	grid-column: 1/13;
 	background-color: #fff;
@@ -239,9 +247,9 @@ form>span {
 	padding: 5px;
 }
 
-.backcard .cardlogo {
+.cardlogo {
 	grid-row: 4/5;
-	grid-column: 11/13;
+	grid-column: 10/13;
 }
 
 .rotateF {
@@ -253,6 +261,7 @@ form>span {
 .rotateB {
 	opacity: 1;
 	transform: rotateY(0deg);
+
 }
 
 @media screen and (max-width:400px) {
